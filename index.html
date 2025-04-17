@@ -1,89 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Than Tint Swe | Cloud Engineer</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #24292e; color: white; padding: 2rem 1rem; text-align: center; }
-    nav { background: #333; padding: 1rem; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
-    .projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    footer { background: #24292e; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-    a.button { display: inline-block; background: #0366d6; color: white; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 4px; text-decoration: none; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Than Tint Swe</h1>
+    <p>Cloud Engineer | AWS | Terraform | Kubernetes</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Than Tint Swe</h1>
-  <p>Cloud Engineer | DevOps Enthusiast | AWS | Terraform | Kubernetes</p>
-</header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a cloud engineer with a background in networking, currently focused on AWS infrastructure, Terraform automation, and Kubernetes orchestration. I enjoy building secure and scalable solutions for modern applications.</p>
+  </section>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>I'm a Cloud Engineer with a background in networking and a passion for building secure, scalable, and automated cloud infrastructure. I’m currently studying BSc Computing (Open University UK), expected to graduate in 2026. I’ve passed AWS SAA, and am preparing for Terraform and CKA certifications.</p>
-  <a class="button" href="resume.pdf" target="_blank">Download Resume</a>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Secure EC2 Infrastructure</h3>
-      <p>Created a secure VPC with public/private subnets, IAM roles, and SSM access using Terraform.</p>
-      <a href="https://github.com/tts1196/Project-1-Secure-EC2-Instance-with-IAM" target="_blank">View on GitHub</a>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Secure EC2 Deployment with IAM</h3>
+      <p>A mini project deploying EC2 instances using Terraform with proper IAM roles and security groups.</p>
+      <a href="https://github.com/tts1196/Project-1-Secure-EC2-Instance-with-IAM" target="_blank">GitHub Repo</a>
     </div>
-    <div class="card">
-      <h3>Serverless File Upload App</h3>
-      <p>Used S3, Lambda, API Gateway, and DynamoDB to build a secure file upload and tracking system.</p>
-      <a href="#">View on GitHub</a>
+    <div class="project">
+      <h3>3-Tier Web App on AWS</h3>
+      <p>Final bootcamp project using AWS, Terraform, and CI/CD with GitHub Actions. Includes VPC, ALB, EC2, and RDS.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="card">
-      <h3>Cloud Platforms</h3>
-      <p>AWS (EC2, S3, Lambda, IAM, CloudFront, WAF, CloudWatch)</p>
-    </div>
-    <div class="card">
-      <h3>Infrastructure as Code</h3>
-      <p>Terraform, CloudFormation (basic)</p>
-    </div>
-    <div class="card">
-      <h3>Containerization</h3>
-      <p>Docker, Kubernetes (CKA in progress)</p>
-    </div>
-    <div class="card">
-      <h3>CI/CD & Tools</h3>
-      <p>GitHub Actions, Git, Linux, VS Code</p>
-    </div>
-  </div>
-</section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Certified Solutions Architect – Associate (2025)</li>
+      <li>CCNA (Cisco Certified Network Associate)</li>
+      <li>Terraform Associate (Planned: April 2025)</li>
+      <li>CKA (Planned: June 2025)</li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:thantintswe@example.com">thantintswe@example.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/than-tint-swe-3a51452a2" target="_blank">View Profile</a></p>
-  <p>GitHub: <a href="https://github.com/tts1196" target="_blank">tts1196</a></p>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:thantintswe.dev@gmail.com">thantintswe.dev@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/than-tint-swe-3a51452a2/" target="_blank">than-tint-swe</a></p>
+    <p>GitHub: <a href="https://github.com/tts1196" target="_blank">tts1196</a></p>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Than Tint Swe. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Than Tint Swe. All rights reserved.</p>
+  </footer>
 </body>
 </html>
