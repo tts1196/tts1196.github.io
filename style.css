@@ -19,17 +19,7 @@ header {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-bottom: 20px;
-}
-
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
 }
 
 nav a {
@@ -94,16 +84,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-photo {
-    width: 100px;
-    height: 100px;
-  }
-
   section {
     padding: 20px;
     margin: 10px;
