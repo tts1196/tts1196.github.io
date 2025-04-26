@@ -1,318 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Than Tint Swe - Cloud & DevOps Engineer</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* Base Styles */
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Header & Navigation */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
-    .logo {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #3498db;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-    }
-    .nav-links li {
-      padding: 0 0.5rem;
-    }
-    .nav-links li a {
-      font-weight: 600;
-    }
-    .nav-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Hero Section (Home) */
-    #home {
-      background: #e8f4fd; /* light blue */
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    #home h1 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    #home p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #555;
-    }
-
-    /* About Section */
-    #about {
-      padding: 3rem 1rem;
-      background: #f9f9f9;
-    }
-    #about h2 {
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    #about p {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    /* Projects Section */
-    #projects {
-      padding: 3rem 1rem;
-    }
-    #projects h2 {
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-    .project {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      max-width: 350px;
-      padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .project img {
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-    .project h3 {
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
-    }
-    .project p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    .project .btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #3498db;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-    .project .btn:hover {
-      background: #2980b9;
-    }
-
-    /* Contact Section */
-    #contact {
-      padding: 3rem 1rem;
-      background: #f9f9f9;
-    }
-    #contact h2 {
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    #contact p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    form input, form textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      width: 100%;
-      resize: vertical;
-    }
-    form button {
-      padding: 0.75rem;
-      border: none;
-      border-radius: 4px;
-      background: #3498db;
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    form button:hover {
-      background: #2980b9;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-    }
-    footer p {
-      margin: 0;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        background: #fff;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-      }
-      .nav-links li {
-        padding: 0.5rem 0;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-toggle {
-        display: block;
-      }
-      .project-list {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Than Tint Swe - Cloud & DevOps Engineer Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007BFF;
+        }
+        nav {
+            position: relative;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        /* Hero Section */
+        #home {
+            background-color: #e0f2ff;
+            color: #333;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        #home h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #007BFF;
+        }
+        #home p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+        }
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        #about h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #007BFF;
+            margin-bottom: 1rem;
+        }
+        #about p {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+        }
+        #about img {
+            margin-top: 2rem;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        /* Skills Section */
+        #skills {
+            background-color: #f0f5ff;
+            padding: 3rem 0;
+        }
+        #skills h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        #skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        #skills ul li {
+            background-color: #fff;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #333;
+        }
+        /* Certifications Section */
+        #certifications {
+            background-color: #fff;
+            padding: 3rem 0;
+        }
+        #certifications h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        #certifications table {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        #certifications th, #certifications td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        #certifications th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        /* Projects Section */
+        #projects {
+            background-color: #f0f5ff;
+            padding: 3rem 0;
+        }
+        #projects h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .project {
+            background-color: #fff;
+            margin: 1rem auto;
+            padding: 1rem;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .project h3 {
+            color: #007BFF;
+            margin-top: 0;
+        }
+        .project p {
+            color: #555;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .project .tech {
+            font-weight: 600;
+            color: #333;
+        }
+        .project .link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .project .link:hover {
+            text-decoration: underline;
+        }
+        /* Resume Section */
+        #resume {
+            background-color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        #resume a {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        #resume a:hover {
+            background-color: #0056b3;
+        }
+        /* Contact Section */
+        #contact {
+            background-color: #f0f5ff;
+            padding: 3rem 0;
+        }
+        #contact h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        #contact .contact-info {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        #contact .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        #contact .contact-info a:hover {
+            text-decoration: underline;
+        }
+        #contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        #contact form input, #contact form textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #contact form button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        #contact form button:hover {
+            background-color: #0056b3;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 200px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .nav-toggle {
+                display: block;
+                color: #333;
+            }
+            nav ul li {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Than Tint Swe</div>
-        <button class="nav-toggle">&#9776;</button>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section id="home">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Hello! I'm <strong>Than Tint Swe</strong>, a Cloud and DevOps Engineer passionate about building scalable and efficient cloud infrastructure. Explore my projects and learn more about my work!</p>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I have over 5 years of experience in the IT industry, specializing in cloud computing and DevOps practices. My expertise includes designing and managing AWS architectures, automating deployments with Terraform, and ensuring robust CI/CD pipelines. I am dedicated to continuous learning and staying current with the latest cloud technologies and best practices.</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project">
-          <img src="https://via.placeholder.com/350x200" alt="AWS Infrastructure Project">
-          <h3>AWS Infrastructure Setup</h3>
-          <p>Designed and implemented a scalable web application infrastructure on AWS using services like EC2, VPC, and Load Balancers. This project demonstrates knowledge of cloud networking and security best practices.</p>
-          <a href="#" class="btn" target="_blank">View Repository</a>
+    <header>
+        <div class="container">
+            <div class="logo">Than Tint Swe</div>
+            <nav>
+                <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="project">
-          <img src="https://via.placeholder.com/350x200" alt="Terraform Project">
-          <h3>Terraform Automation</h3>
-          <p>Created infrastructure as code (IaC) using Terraform to provision resources in AWS. This lab showcases automated resource provisioning and version control of infrastructure configurations.</p>
-          <a href="#" class="btn" target="_blank">View Repository</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, feel free to send me a message or email me directly at <a href="mailto:than.tint.swe@example.com">than.tint.swe@example.com</a>.</p>
-      <form action="mailto:than.tint.swe@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Than Tint Swe</p>
-  </footer>
-
-  <script>
-    // Mobile navigation toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Than Tint Swe — Aspiring Cloud & DevOps Engineer</h1>
+            <p>Welcome! I am Than Tint Swe, an aspiring Cloud and DevOps Engineer. I am passionate about building scalable and efficient cloud infrastructure. Explore my portfolio to learn more about my background, skills, projects, and certifications.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am currently pursuing a BSc (Hons) in Computing at The Open University. I have obtained certifications including Cisco CCNA and AWS Certified Solutions Architect – Associate. Based in Nagoya, Japan, I am originally from Myanmar and eager to contribute my skills in cloud and DevOps to innovative projects.</p>
+            <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?w=800&fm=jpg&crop=entropy&cs=tinysrgb&fit=crop&h=500" alt="Person typing on laptop computer keyboard">
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>AWS (EC2, VPC, RDS, S3)</li>
+                <li>Terraform & Infrastructure as Code</li>
+                <li>Kubernetes (Amazon EKS)</li>
+                <li>GitHub Actions (CI/CD)</li>
+                <li>Networking & Network Automation</li>
+                <li>Linux System Administration</li>
+            </ul>
+        </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <table>
+                <tr>
+                    <th>Certification</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>CCNA (Cisco Certified Network Associate)</td>
+                    <td>Obtained (2024)</td>
+                </tr>
+                <tr>
+                    <td>AWS Certified Solutions Architect – Associate</td>
+                    <td>Obtained (2025)</td>
+                </tr>
+                <tr>
+                    <td>Terraform Associate</td>
+                    <td>In Progress</td>
+                </tr>
+                <tr>
+                    <td>CKA (Certified Kubernetes Administrator)</td>
+                    <td>In Progress</td>
+                </tr>
+                <tr>
+                    <td>JLPT N3 (Japanese Language Proficiency)</td>
+                    <td>Obtained (2024)</td>
+                </tr>
+                <tr>
+                    <td>JLPT N2 (Japanese Language Proficiency)</td>
+                    <td>Studying (expected 2025)</td>
+                </tr>
+            </table>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>AWS Infrastructure Mini-Lab</h3>
+                <p>Built a personal AWS environment to practice cloud networking and compute resources. The lab includes a custom VPC with public/private subnets, EC2 instances, security groups, and AWS Systems Manager for management. This project helped me gain hands-on experience with foundational AWS services and infrastructure design.</p>
+                <p class="tech">Tech stack: AWS (VPC, EC2, IAM, SSM)</p>
+                <img src="https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?w=800&fm=jpg&crop=entropy&cs=tinysrgb&fit=crop&h=500" alt="Computer screen displaying coding or AWS infrastructure management">
+                <a href="#" class="link">GitHub Link</a>
+            </div>
+            <div class="project">
+                <h3>Terraform 3-Tier App Automation</h3>
+                <p>Automated deployment of a three-tier web application on AWS using Terraform. This project deployed a Kubernetes cluster (Amazon EKS) for the application layer, and Amazon RDS for the database. A CI/CD pipeline was implemented with GitHub Actions for automated builds and deployments. Secrets management is handled securely in the cloud environment.</p>
+                <p class="tech">Tech stack: Terraform, AWS (EKS, RDS, S3), GitHub Actions, Kubernetes</p>
+                <img src="https://images.unsplash.com/photo-1667372335962-5fd503a8ae5b?w=800&fm=jpg&crop=entropy&cs=tinysrgb&fit=crop&h=500" alt="Abstract image representing DevOps and automation">
+                <a href="#" class="link">GitHub Link</a>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <a href="履歴書.pdf" download>Download Resume</a>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:than.swe@ou.ac.uk">than.swe@ou.ac.uk</a></p>
+            </div>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Than Tint Swe. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var navUL = document.querySelector('nav ul');
+            navUL.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
