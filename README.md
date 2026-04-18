@@ -132,7 +132,7 @@ thantintswe-portfolio/
 ## 🚀 Deployment
 
 ### GitHub Pages (Current)
-- **URL**: https://thantintswe.me
+- **URL**: https://tts1196.github.io/
 - **Custom Domain**: Configured via CNAME
 - **Auto-deployment**: via `npm run deploy`
 
