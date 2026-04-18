@@ -2,15 +2,14 @@
 
 > A professional bilingual (English/Japanese) portfolio website showcasing cloud infrastructure and DevOps expertise
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-thantintswe.me-blue?style=for-the-badge&logo=github-pages)](https://thantintswe.me)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/tts1196/thantintswe-portfolio)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://tts1196.github.io/)
 
 ## 🌟 Overview
 
 A modern, responsive portfolio website built for the Japanese tech market. Features bilingual support, project showcases, and professional presentation of cloud infrastructure and DevOps skills.
 
 ## 🚀 Live Site
-**Visit**: [https://thantintswe.me](https://thantintswe.me)
+**Visit**: https://tts1196.github.io/
 
 ## 🛠️ Tech Stack
 
